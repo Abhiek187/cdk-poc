@@ -65,6 +65,8 @@ cdk diff # compare the local and deployed stack
 cdk synth # generate a CloudFormation template based on the construct
 ```
 
+For more info on the CDK, check out the [docs](https://docs.aws.amazon.com/cdk/api/v2/).
+
 # Welcome to your CDK TypeScript project
 
 This is a blank project for CDK development with TypeScript.
