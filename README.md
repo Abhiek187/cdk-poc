@@ -4,7 +4,7 @@ Testing out the AWS CDK
 
 ## Installing Locally
 
-The AWS CLI, SAM CLI, & Node are required to be installed.
+The AWS CLI, SAM CLI, & Node are required to be installed. Docker is also required if testing locally using SAM.
 
 Install the CDK:
 
@@ -34,6 +34,22 @@ This will create a CloudFormation stack called CDKToolkit with the following res
 - An S3 bucket to store CloudFormation templates & other resources (objects are automatically deleted after 1 year)
 
 You can view the CloudFormation template used by adding `--show-template` to the bootstrap command. This command will need to be run every once in a while to ensure the latest bootstrap template is used.
+
+## Running Tests
+
+Run `npm test` to execute all the unit tests. Note that the app must be built using `npm run build` before running all the tests to capture all changes.
+
+## Running SAM Commands
+
+To test or build constructs using SAM, synthesize a CloudFormation template without copying assets. Then point SAM to the generated template:
+
+```bash
+cdk synth --no-staging
+sam local [invoke|start-api|start-lambda] -t ./cdk.out/CdkPocStack.template.json
+sam build -t ./cdk.out/CdkPocStack.template.json
+```
+
+Note that `sam deploy` isn't supported for the CDK. Run `cdk deploy` instead.
 
 ## CDK Commands
 
