@@ -19,7 +19,6 @@ test("Lambda Function Created", () => {
   const app = new cdk.App();
   const stack = new CdkPoc.CdkPocStack(app, "MyTestStack");
   const template = Template.fromStack(stack);
-  console.log(template.toJSON());
 
   template.hasResourceProperties("AWS::Lambda::Function", {
     Architectures: ["arm64"],

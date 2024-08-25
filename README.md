@@ -1,5 +1,8 @@
 # cdk-poc
 
+[![CDK CI/CD](https://github.com/Abhiek187/cdk-poc/actions/workflows/cdk.yml/badge.svg)](https://github.com/Abhiek187/cdk-poc/actions/workflows/cdk.yml)
+[![CodeQL](https://github.com/Abhiek187/cdk-poc/actions/workflows/codeql.yml/badge.svg)](https://github.com/Abhiek187/cdk-poc/actions/workflows/codeql.yml)
+
 Testing out the AWS CDK
 
 ## Installing Locally
