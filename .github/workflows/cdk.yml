@@ -64,5 +64,5 @@ jobs:
       - run: npm run cdk synth
 
       # Deploy to dev/QA/prod
-      - run: npm run cdk deploy --require-approval never
+      - run: npm run cdk deploy -- --require-approval never
       - run: npm run cdk destroy # don't persist deployements for demo purposes
