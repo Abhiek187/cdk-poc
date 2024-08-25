@@ -49,6 +49,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
+          # Change the trust policy to temporarily allow this repo
           role-to-assume: ${{ vars.GH_OIDC_ROLE }}
           aws-region: ${{ vars.AWS_REGION }}
       - uses: actions/setup-node@v4
